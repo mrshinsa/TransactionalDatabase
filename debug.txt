@@ -1,0 +1,74 @@
+        
+/*
+      
+        set("a", 10);
+        get("a"); 
+        unset("a");    
+        get("a"); 
+
+        set("a", 10);
+        set("b", 10);
+        numEqualTo(10);
+        numEqualTo(20);
+        unset("a"); 
+        numEqualTo(10);
+        set("b", 30);  
+        numEqualTo(10);
+
+
+        begin();
+        set("a", 10);
+        get("a");          
+        begin();        
+        set("a", 20);
+        get("a");
+        rollback() ;
+        get("a");
+        rollback() ;
+        get("a");
+
+        begin();
+        set("a", 30);
+        begin();
+        set("a", 40);
+        commit();
+        get("a");  
+        rollback() ;
+
+
+        set("a", 50);
+        begin();
+        get("a");  
+        set("a", 60);
+        begin();
+        unset("a"); 
+        get("a");  
+        rollback(); 
+        get("a");  
+        commit();
+        get("a");  
+
+
+        
+         /*
+        begin();
+        set("a", 10);
+        set("b", 5);
+        set("c", 42);
+        set("d", 13);
+        begin();
+        set("e", 64);
+        set("f", 5);
+        set("g", 52);
+        set("h", 43);
+        get("f");
+        get("c");
+        numEqualTo(5);
+        unset("f");
+        numEqualTo(5);
+        commit();
+        rollback() ;
+        System.out.println();
+        rollback() ;
+        System.out.println();
+        */
